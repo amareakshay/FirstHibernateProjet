@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!-- If we use any other name apart from hibernate.cfg.xml, then we will have to tell hibernate what the config file is
+     Whereas if we stick to this nomenclature, hibernate will be able to find it automatically -->        
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/hibernatedb</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">Access#125</property>
+        <property name="hibernate.connection.pool_size">1</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        
+        <!-- Drop and re-create the database schema on startup -->
+        <!-- create : Will drop the table and schema everytime and create a new one in every run
+             update : Will not drop the table and schema in every run 
+         -->
+        <property name="hbm2ddl.auto">create</property>
+        
+        <!-- mappings for annotated classes -->
+        <mapping class="org.akshay.hibernatex.dto.UserDetails"/>
+
+    </session-factory>
+</hibernate-configuration>   
