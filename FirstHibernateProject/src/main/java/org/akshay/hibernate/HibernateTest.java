@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.akshay.hibernatex.dto.Address;
 import org.akshay.hibernatex.dto.UserDetails;
+import org.akshay.hibernatex.dto.UserDetails1;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -11,7 +12,7 @@ import org.hibernate.cfg.Configuration;
 public class HibernateTest {
 
 	public static void main(String[] args) {
-		UserDetails user = new UserDetails();
+		UserDetails1 user = new UserDetails1();
 		Address homeAddress = new Address();
 		Address officeAddress = new Address();
 		
@@ -33,8 +34,12 @@ public class HibernateTest {
 		officeAddress.setPinCode("LS27 0WH");
 		
 		//Allocate the address to UserDetails
-		user.setHomeAddress(homeAddress);
-		user.setOfficeAddress(officeAddress);
+//		user.setHomeAddress(homeAddress);
+//		user.setOfficeAddress(officeAddress);
+		
+		// Set Implementation
+		user.getListOfAddresses().add(homeAddress);
+		user.getListOfAddresses().add(officeAddress);
 		
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
 		Session session = sessionFactory.openSession();
@@ -44,8 +49,16 @@ public class HibernateTest {
 		session.getTransaction().commit();
 		session.close();
 		
+		user=null;
+		session = sessionFactory.openSession();
+		user = session.get(UserDetails1.class, 1);
+		
 		System.out.println("User id is : " + user.getUserId());
 		System.out.println("User Name is : " + user.getUserName());
+		
+		user.getListOfAddresses().forEach(address -> System.out.println(address.getPinCode()));
+		
+		session.close();
 		
 		
 	}

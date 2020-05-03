@@ -1,0 +1,4 @@
+org\akshay\hibernate\HibernateTest.class
+org\akshay\hibernatex\dto\UserDetails.class
+org\akshay\hibernatex\dto\UserDetails1.class
+org\akshay\hibernatex\dto\Address.class

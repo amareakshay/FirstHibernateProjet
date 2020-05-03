@@ -23,6 +23,7 @@
         
         <!-- mappings for annotated classes -->
         <mapping class="org.akshay.hibernatex.dto.UserDetails"/>
+        <mapping class="org.akshay.hibernatex.dto.UserDetails1"/>
 
     </session-factory>
 </hibernate-configuration>   
