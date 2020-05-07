@@ -1,4 +1,14 @@
+org\akshay\hibernatex\dto\TwoWheeler.class
+org\akshay\hibernatex\dto\UserDetails3.class
+org\akshay\hibernatex\dto\Vehical.class
+org\akshay\hibernate\HibernateTest2.class
+org\akshay\hibernatex\dto\FourWheeler.class
+org\akshay\hibernate\HibernateTest3.class
 org\akshay\hibernate\HibernateTest.class
 org\akshay\hibernatex\dto\UserDetails.class
+org\akshay\hibernatex\dto\UserDetails2.class
+org\akshay\hibernatex\dto\UserDetails3$UserDetails3Builder.class
+org\akshay\hibernate\HibernateTest1.class
 org\akshay\hibernatex\dto\UserDetails1.class
+org\akshay\hibernatex\dto\Vehicle.class
 org\akshay\hibernatex\dto\Address.class

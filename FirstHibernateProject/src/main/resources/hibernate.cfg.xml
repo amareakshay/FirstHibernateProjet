@@ -24,6 +24,12 @@
         <!-- mappings for annotated classes -->
         <mapping class="org.akshay.hibernatex.dto.UserDetails"/>
         <mapping class="org.akshay.hibernatex.dto.UserDetails1"/>
+        <mapping class="org.akshay.hibernatex.dto.UserDetails2"/>
+        <mapping class="org.akshay.hibernatex.dto.UserDetails3"/>
+        <mapping class="org.akshay.hibernatex.dto.Vehical"/>
+        <mapping class="org.akshay.hibernatex.dto.Vehicle"/>
+        <mapping class="org.akshay.hibernatex.dto.TwoWheeler"/>
+        <mapping class="org.akshay.hibernatex.dto.FourWheeler"/>
 
     </session-factory>
 </hibernate-configuration>   

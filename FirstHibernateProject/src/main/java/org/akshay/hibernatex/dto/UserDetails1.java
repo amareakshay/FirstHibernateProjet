@@ -23,7 +23,7 @@ import org.hibernate.annotations.CollectionId;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
-@Entity(name="User_Details")
+@Entity
 public class UserDetails1 { 
 	
 	// name tells Hibernate that it should use the value specified in the name for naming the column
