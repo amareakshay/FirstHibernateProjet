@@ -10,6 +10,21 @@
     	<version>5.4.14.Final</version>
 	</dependency>
 	
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-ehcache -->
+	<dependency>
+ 	   <groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-ehcache</artifactId>
+    	<version>5.4.15.Final</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/net.sf.ehcache/ehcache -->
+	<dependency>
+    	<groupId>net.sf.ehcache</groupId>
+    	<artifactId>ehcache</artifactId>
+    	<version>2.10.6</version>
+	</dependency>
+	
+	
 	<dependency>
     	<groupId>postgresql</groupId>
     	<artifactId>postgresql</artifactId>
@@ -22,11 +37,17 @@
 		<version>1.18.12</version>
 		<scope>provided</scope>
 	</dependency>
+	
+	  <!-- Logging -->
+  	<dependency> 
+ 		<groupId>ch.qos.logback</groupId>
+  		<artifactId>logback-classic</artifactId>
+  		<version>1.2.3</version>
+  	</dependency>
 
   </dependencies>
   <properties>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-
 </project>

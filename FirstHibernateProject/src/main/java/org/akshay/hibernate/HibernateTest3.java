@@ -19,11 +19,26 @@ public class HibernateTest3 {
 		
 		session.save(user);
 		
-		user.setUserName("User Dets Updated");
+		user.setUserName("User Dets Updated 1");
+		session.update(user);
 		
-		session.getTransaction().commit();
+		user.setUserName("User Dets Updated 2");
 		
-		session.close();
+		
+		  session.getTransaction().commit();
+		  
+		/*
+		 * session.beginTransaction();
+		 * 
+		 * user.setUserName("User Dets Updated 3");
+		 * 
+		 * session.getTransaction().commit();
+		 */
+		 
+		
+		  session.close();
+		
+		user.setUserName("User Dets Updated 4");
 		
 	}
 
